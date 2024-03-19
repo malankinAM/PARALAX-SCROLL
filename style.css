@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a, p{
+    font-family: "Montserrat",sans-serif;
+}
+body{
+    font-family: "Montserrat",sans-serif;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 30px 100px;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+}
+
+header ul li{
+    list-style: none;
+    display: inline-block;
+    float: left;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 30px 45px;
+    border-left: 1px solid rgba(255,255,255,.3);
+    transition: all ease 0.5s;
+}
+header ul li:last-child a{
+    border-right: 1px solid rgba(255,255,255,.3);
+}
+
+header ul li:hover a{
+   background-color: #fff;
+   color: #000;
+}
+
+.slide{
+    position: relative;
+    background-size: cover ;
+    height: 100vh;
+}
+
+.slide1{
+    background: url(./1.jpeg)no-repeat;
+    background-attachment: fixed;
+}
+.slide2{
+    background: url(./2.jpeg)no-repeat;
+    background-attachment: fixed;
+}
+.slide3{
+    background: url(./3.jpeg)no-repeat;
+    background-attachment: fixed;
+}
+.slide4{
+    background: url(./4.jpeg)no-repeat;
+    background-attachment: fixed;
+}
+.slide5{
+    background: url(./5.jpeg)no-repeat;
+    background-attachment: fixed;
+}
+.slide6{
+    background: url(./6.jpeg)no-repeat;
+    background-attachment: fixed;
+}
+
+.text-group{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: Jomhuria;
+    text-transform: uppercase;
+}
+.text-group h1{
+    font-size: 96px;
+}
+
+.text-group h2{
+    font-size:48px ;
+    font-weight: 400;
+}
+
+.text-group h3{
+    font-size: 40px;
+}
+
+.text-group h1 span,
+.text-group h3 span{
+    display: inline-block;
+}
+
+.text-group a{
+    display: block;
+    color: #050505;
+    text-decoration: none;
+    padding-top: 200px;
+    font-weight: 600;
+    font-size: 40px;
+    font-family: Jomhuria;
+}

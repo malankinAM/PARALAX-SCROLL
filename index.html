@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="./logo.jpeg" alt="" style="width: 150px;"></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#slide1">Engineer1</a></li>
+                <li><a href="#slide2">Engineer2</a></li>
+                <li><a href="#slide3">Engineer3</a></li>
+                <li><a href="#slide4">Engineer4</a></li>
+                <li><a href="#slide5">Engineer5</a></li>
+                <li><a href="#slide6">Engineer6</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slide slide1" id="slide1">
+              <div class="text-group">
+                   <h3>Kamil</h3>
+                   <h1>DevOps engineer</h1>
+                   <a href="#slide2">Scroll Down</a>
+              </div>
+    </section>
+    <section class="slide slide2" id="slide2">
+              <div class="text-group">
+                   <h3>Daniel</h3>
+                   <h1>Full stack developer</h1>
+                   <a href="#slide2">Scroll Down</a>
+              </div>
+    </section>
+    <section class="slide slide3" id="slide3">
+              <div class="text-group">
+                   <h3>Lubov</h3>
+                   <h1>Product designer</h1>
+                   <a href="#slide3">Scroll Down</a>
+              </div>
+    </section>
+    <section class="slide slide4" id="slide4">
+              <div class="text-group">
+                   <h3>Svetlana</h3>
+                   <h1> Design</h1>
+                   <a href="#slide4">Scroll Down</a>
+              </div>
+    </section>
+    <section class="slide slide5" id="slide5">
+              <div class="text-group">
+                   <h3>Irina</h3>
+                   <h1> Trainee</h1>
+                   <a href="#slide6">Scroll Down</a>
+              </div>
+    </section>
+    <section class="slide slide6" id="slide6">
+              <div class="text-group">
+                   <h3>Alex_Alex</h3>
+                   <h1>Deweloper</h1>
+                   <a href="#slide1">Scroll Down</a>
+              </div>
+    </section>
+        
+
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(".text-group h1, .text-group h3").html(function(index,html){
+    return html.replace(/\S/g, '<span>$&</span>');
+})
+
+var tl = gsap.timeline();
+
+tl.from(".slide",{
+    opacity:0 ,
+    delay:1,
+})
+.from("header",{
+    y: -20,
+    opacity:0 ,
+    delay:1,
+})
+.from("header ul li",{
+    y: -20,
+    opacity:0 ,
+    stagger:.2,
+})
+.from(".text-group h1 span",{
+   x: 50,
+   scale:0,
+   opacity:0,
+   stagger:.1,
+})
+.from(".text-group h3 span",{
+   y:-50,
+   scale:0,
+   opacity:0,
+   stagger:.1,
+},"-=8")
+.from(".text-group a",{
+   y:20,
+   scale:0,
+   opacity:0,
+   stagger:.1,
+},"-=6")
+      </script>
+</body>
+</html>
